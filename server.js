@@ -45,7 +45,8 @@ app.post("/api/user/login", (req, res) => {
 
     userService.checkUser(req.body)
     .then((user) => {
-        let token = jwt.sign(user, process.env.JWT_SECRET);
+            let payload = {_id: user._id, userName: user.userName};
+            let token = jwt.sign(payload, jwtOptions.secretOrKey);
         res.json({ "message": "login successful", "token": token });
     }).catch(msg => {
         res.status(422).json({ "message": msg });
