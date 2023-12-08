@@ -48,6 +48,7 @@ module.exports.registerUser = function (userData) {
                 newUser.save().then(() => {
                     resolve("User " + userData.userName + " successfully registered");  
                 }).catch(err => {
+                    console.log(err);
                     if (err.code == 11000) {
                         reject("User Name already taken");
                     } else {
