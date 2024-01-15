@@ -6,7 +6,7 @@
 * 
 *  Name: Nicole Barrero Student ID: 158270215 Date: Dec 2, 2023
 *
-*  Vercel App (Deployed) Link: 
+*  Vercel App (Deployed) Link: https://next6-2.vercel.app/
 *
 ********************************************************************************/ 
 import { Container, Col, Row } from "react-bootstrap"
